@@ -1,0 +1,94 @@
+.footerContainer{
+    background-color: rgb(255, 255, 255);
+    height: 660px;
+    width: 100%;
+    padding: 0%;
+}
+.boxPadding{
+    height: 95px;
+    width: 95%;
+    margin:auto
+}
+.footerlogo {
+    margin-right: 32px;
+    padding-right: 32px !important;
+    height: 60px;
+   width: 232px;
+}
+.footertxt {
+    width: 60%;
+    padding: 0;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(13, 21, 28, 0.5);
+    
+}
+.footerAllList {
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+.footerAllList li{
+    list-style-type: none;
+    line-height: 32px;
+    letter-spacing: 0.25px;
+    cursor: pointer;
+   
+}
+.footerAllList li:hover{
+    color: orange;
+}
+ul{
+    padding: 5px;
+    text-align: left;
+}
+.footerAllList  h2 {
+    font-size: 16px;
+    line-height: 32px;
+    padding: 0;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+.subscribe{
+    margin-top: 15px;
+}
+
+.subscribe li{
+    line-height: 20px;
+}
+.appStore{
+    
+    display: flex;
+    height: 50px;
+    width: 280px;
+    justify-content: space-between;
+}
+.appStore>img{
+    width: 49%;
+    cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+.makeNone {
+        display: none;
+    }
+}
+.reservedLogo{
+    display: flex;
+    justify-content: space-between;
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(171, 169, 169);
+    cursor: pointer;
+
+
+}
+.reservedLog h4{
+    font-family: 'Times New Roman', Times, serif;
+        color: rgba(11, 18, 25, .5);
+}
