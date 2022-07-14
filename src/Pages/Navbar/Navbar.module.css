@@ -21,7 +21,6 @@
 .homeLogo{
     width: 178px;
     height: 60px;
-    border: 1px solid red
 }
 .homeLogo > img{
     width: 100%;

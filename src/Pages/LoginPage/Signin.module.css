@@ -1,0 +1,27 @@
+.signinCont{
+    width: 100%;
+    height: 650px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bigBox{
+    height: 500px;
+    padding: 20px;
+    width: 70%;
+    border: 1px solid teal;
+    display: flex;
+    justify-content: space-between;
+    /* flex-shrink: 1; */
+}
+
+.bigBox > div{
+    /* flex-grow: 1; */
+    width: 40%;
+    border: 1px solid orange;
+}
+.bigBox image{
+    width: 99%;
+    height: 10%;
+}
