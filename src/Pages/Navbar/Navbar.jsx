@@ -17,7 +17,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
-export const Navbar = () => {
+export const Navbar = ({ position }) => {
   function handleSearch(e) {
     if (e.key === "Enter") {
       console.log(e.target.value, "by enter");
@@ -29,7 +29,7 @@ export const Navbar = () => {
   }
   return (
     <div>
-      <div className={style.topFirstcont}>
+      <div className={style.topFirstcont} style={{position:`${position}`}}>
         <div className={style.topBox}>
           <div className={style.homeLogo}>
             <img
@@ -67,8 +67,8 @@ export const Navbar = () => {
           </div>
           <div className={style.imgAndKey}>
             <IconButton aria-label="cart">
-              <StyledBadge badgeContent={4} >
-                <ShoppingCartIcon style={{ color: "white",width:"40px" }} />
+              <StyledBadge badgeContent={4}>
+                <ShoppingCartIcon style={{ color: "white", width: "40px" }} />
               </StyledBadge>
             </IconButton>
             <div>Cart</div>

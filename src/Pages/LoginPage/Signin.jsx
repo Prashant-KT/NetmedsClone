@@ -18,15 +18,13 @@ export const Signin = () => {
    }
   return (
     <div>
-      <div style={{ position: "static" }}>
-        <Navbar />
-      </div>
+        <Navbar position={"static"}/>
+      <br></br>
+      {/* <br></br>
       <br></br>
       <br></br>
       <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+      <br></br> */}
       <div className={style.signinCont}>
         <div className={style.bigBox}>
           <div className={style.bigBoxImage}>
