@@ -1,27 +1,58 @@
 .signinCont{
     width: 100%;
     height: 650px;
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+body{
+        background-color: rgb(246, 246, 247);
+}
 .bigBox{
     height: 500px;
-    padding: 20px;
-    width: 70%;
-    border: 1px solid teal;
+    padding: 40px;
+    width: 65%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    /* border: 1px solid teal; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     display: flex;
     justify-content: space-between;
-    /* flex-shrink: 1; */
 }
 
 .bigBox > div{
-    /* flex-grow: 1; */
-    width: 40%;
-    border: 1px solid orange;
+    flex: 1; 
+   
+    /* border: 1px solid orange; */
 }
-.bigBox image{
-    width: 99%;
-    height: 10%;
+.bigBoxImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.bigBoxLogin > div{
+  width: 73%;
+  /* border: 1px solid red; */
+  margin: auto;
+  text-align: left;
+  height: 100%;
+}
+.inputTag{
+    color:rgb(36,174,177);
+    font-size: 56px;
+    width: 100%;
+    height: 40px;
+}
+.submitButton{
+    width: 100%;
+    height: 50px;   
+}
+h2~p{
+    margin-top: 0px;
+    margin-bottom: 35px;
+    color: rgb(133, 142, 159);
+}
+
+.bigBoxLogin h2{
+    margin-bottom: 10px;
 }
