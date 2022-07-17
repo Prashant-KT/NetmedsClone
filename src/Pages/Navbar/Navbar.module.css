@@ -4,15 +4,13 @@
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 999;
-    width: 100%;
+    z-index: 1;
     box-shadow: 0 -2px 6px #333;
     
 }
 .topBox{
     width: 92%;
     margin: auto;
-    border: 1px solid orangered;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -67,5 +65,6 @@
     align-items: center;
     color: #FFFFFF;
     font-size: large;
-    font-weight: 500
+    font-weight: 500;
+    text-decoration: none;
 }

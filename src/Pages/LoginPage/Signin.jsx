@@ -1,5 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Footer } from "../Footer/Footer";
 import { Navbar } from "../Navbar/Navbar";
 import style from "./Signin.module.css";
 export const Signin = () => {
@@ -18,13 +20,8 @@ export const Signin = () => {
    }
   return (
     <div>
-        <Navbar position={"static"}/>
-      <br></br>
-      {/* <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br> */}
+      <Navbar position={"static"} />
+
       <div className={style.signinCont}>
         <div className={style.bigBox}>
           <div className={style.bigBoxImage}>
@@ -35,7 +32,7 @@ export const Signin = () => {
           </div>
           <div className={style.bigBoxLogin}>
             <div>
-              <h2>Sign In / Sign Up</h2>
+              <h2>Sign In</h2>
               <p>
                 Sign up or Sign in to access your orders, special offers, health
                 tips and more!
@@ -65,14 +62,16 @@ export const Signin = () => {
                 className={style.submitButton}
                 variant="contained"
                 color="success"
-                onClick = {handlelogin}
+                onClick={handlelogin}
               >
                 Submit
               </Button>
+              <Link to='/signup'>Create a new account</Link>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

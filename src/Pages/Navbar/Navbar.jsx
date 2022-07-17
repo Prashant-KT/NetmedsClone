@@ -5,6 +5,7 @@ import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Link } from "react-router-dom";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -13,7 +14,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     border: `2px solid ${theme.palette.background.paper}`,
     padding: "0 4px",
     background: "rgb(238,67,128)",
-    color:"white"
+    color: "white",
   },
 }));
 
@@ -29,14 +30,16 @@ export const Navbar = ({ position }) => {
   }
   return (
     <div>
-      <div className={style.topFirstcont} style={{position:`${position}`}}>
+      <div className={style.topFirstcont} style={{ position: `${position}` }}>
         <div className={style.topBox}>
-          <div className={style.homeLogo}>
-            <img
-              src="https://www.netmeds.com/assets/gloryweb/images/home-logo-netmeds-new.svg"
-              alt="logo"
-            />
-          </div>
+          <Link to="/home">
+            <div className={style.homeLogo}>
+              <img
+                src="https://www.netmeds.com/assets/gloryweb/images/home-logo-netmeds-new.svg"
+                alt="logo"
+              />
+            </div>
+          </Link>
           {/* logo part over */}
           <div className={style.SearchBarBox}>
             <span>Deliver to</span>
@@ -74,7 +77,9 @@ export const Navbar = ({ position }) => {
             <div>Cart</div>
           </div>
           <div className={style.imgAndKey}>
-            <div>Login/Sign</div>
+            <Link to="/signin" className={style.imgAndKey}>
+              Login/Sign
+            </Link>
           </div>
         </div>
       </div>

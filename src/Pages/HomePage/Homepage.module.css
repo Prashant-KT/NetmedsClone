@@ -1,0 +1,159 @@
+.withAttachedNavbar{
+    width: 100%;
+    background-color: #32aeb1;
+    height: 90px;
+    position:static;
+}
+
+.withAttachedNavbar > div{
+    width: 76%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.withAttachedNavbar>div>div {
+    width: 13%;
+    height: 75px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    cursor: pointer;
+    color: rgb(214, 239, 239);
+    font-size: 16px;
+}
+
+.withAttachedNavbar>div>div:nth-child(1){
+    color: rgb(255, 159, 34) !important;
+    font-size: large;
+    font-weight: 600;
+}
+.withAttachedNavbar>div>div:nth-child(5) {
+    width: 16%;
+}
+.Linktag{
+    color: rgb(214, 239, 239);
+    text-decoration: none;
+}
+.Linktag2{
+    color: rgb(255, 159, 34) !important;
+}
+
+.sliderContainerBox{
+    width: 98%;
+    height: 350px;
+    margin: auto;
+}
+.threeCardProduct{
+    height: 85px;
+    width: 96%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.threeCardProduct > div{
+    height: 100%;
+    width: 32%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px -4px rgb(11 18 25 / 10%);
+    display: flex;
+    align-items: center;
+}
+
+.threeCardProduct>div>img{
+    width: 56px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 24px;
+}
+
+.contenttxt{
+    display: block;
+
+}
+.threeheading{
+    font-size: 20px;
+    line-height: 26px;
+    color: #0b1219;
+    display: block;
+    font-weight: 500;
+    text-align: left;
+}
+
+.savetext{
+    color: #5ba41c;
+    font-weight: 500;
+}
+
+.endHeadingGap{
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+}
+.endHeadingGap > h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 24px;
+    color: #0b1219;
+    padding: 0;
+}
+
+.endHeadingGap>p{
+    font-size: 14px;
+    color: #ef4281;
+    letter-spacing: 0;
+    cursor: pointer;
+    width: 67px;
+    display: flex;
+    justify-content: space-between;
+    background: url(https://www.netmeds.com/assets/version1657888943/gloryweb/images/icons/pink_right.svg) no-repeat right;
+}
+
+.paymentPartners{
+    width: 96%;
+    margin: auto;
+    height: 80px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.paymentPartners > div{
+    display: flex;
+    width: 32%;
+    cursor: pointer;
+    height: 65px;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    border-radius: 7px;
+}
+.paymentPartners>div>img {
+        height: 36px;
+            width: 52px;
+            margin-left: 14px;
+            float: left;
+            padding-right: 14px;
+            border-right: 1px solid rgba(21, 27, 57, 0.1);
+}
+.paymentPartners>div>div > p{
+    font-size: 11px;
+    font-weight: 500;
+    padding-top: 1px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+.paymentPartners>div>div{
+    display: flex;
+    width: 78%;
+    height: 70px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align:left;
+}
