@@ -5,8 +5,14 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { BigCommonSlider } from "./BigCommonSlider/BigCommonSlider";
 
+import { trandingImages } from "./trending";
+import { RunningSlider } from "./RunningSlider/RunningSlider";
+
+
 
 export const Homepage = () => {
+ 
+
   const [show, setShow] = useState(true);
   const [position, setPosition] = useState("static");
   const controlNavbar = () => {
@@ -187,7 +193,58 @@ export const Homepage = () => {
         </div>
       </div>
 
-      
+      <div className={style.previouseDivider}>
+        <div>
+          <div className={style.preOrderDiv}>
+            <div>
+              <h2> Payment Partner Offers </h2>
+              <p>Your previously ordered products</p>
+            </div>
+            <div className={style.view_btn}>View Order</div>
+          </div>
+          <div className={style.preOrderDivImg}>
+            <img
+              src="https://www.netmeds.com/assets/gloryweb/images/icons/new-icons/previous_orders.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div>
+          <div className={style.preOrderDiv}>
+            <h2 style={{ marginTop: "20px", marginBottom: "10px" }}>
+              Beauty Products
+            </h2>
+            <p style={{ color: "green", fontSize: "20px" }}>
+              Save Upto 40% off
+            </p>
+            <span
+              style={{
+                height: "20px",
+                padding: "10px",
+                paddingLeft: "15px",
+                paddingRight: "15px",
+                borderRadius: "5px",
+                color: "white",
+                background: " #32aeb1",
+              }}
+            >
+              Explore Beauty
+            </span>
+          </div>
+          <div className={style.preOrderDivImg}>
+            <img
+              src="https://www.netmeds.com/assets/gloryweb/images/icons/new-icons/beauty_products.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className={style.endHeadingGap}>
+        <h2> Trending Today </h2>
+      </div>
+
+      <RunningSlider images = {trandingImages} />
       <div style={{ height: "14000px", border: "1px solid orange" }}></div>
     </div>
   );

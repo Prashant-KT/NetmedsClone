@@ -157,3 +157,63 @@
     align-items: flex-start;
     text-align:left;
 }
+
+
+.previouseDivider{
+    height: 200px;
+    width: 96%;
+    margin: auto;
+    display: flex;
+}
+.previouseDivider>div:nth-child(1){
+    border-right: 1px solid rgb(196, 202, 206);
+}
+.previouseDivider> div{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.previouseDivider>div>div{
+    height: 100%;
+    flex: 1;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.preOrderDiv > h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 24px;
+    color: #0b1219;
+    padding: 0;
+}
+.preOrderDiv > div >p{
+    font-size: 18px;
+}
+.preOrderDivImg{
+    display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+.view_btn {
+    display: block;
+    /* margin-top: 30px; */
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    background: url(https://www.netmeds.com/assets/version1657888943/gloryweb/images/icons/new-icons/arrow_mark.svg) no-repeat right top;
+    width: 150px;
+    color: #24aeb1;
+    letter-spacing: 1px;
+    text-align: left;
+    box-shadow: none;
+}
+
+
+/* auto slider */
+
+.autoSlider img{
+    border-radius: 10px;
+}
