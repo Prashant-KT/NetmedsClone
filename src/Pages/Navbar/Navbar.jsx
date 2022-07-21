@@ -6,6 +6,7 @@ import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -19,6 +20,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 export const Navbar = ({ position }) => {
+    const userName = useSelector((state) => state.loginState.userName);
+
   function handleSearch(e) {
     if (e.key === "Enter") {
       console.log(e.target.value, "by enter");
@@ -78,7 +81,7 @@ export const Navbar = ({ position }) => {
           </div>
           <div className={style.imgAndKey}>
             <Link to="/signin" className={style.imgAndKey}>
-              Login/Sign
+              {userName !== "" ? userName : "Login / Sign"}
             </Link>
           </div>
         </div>

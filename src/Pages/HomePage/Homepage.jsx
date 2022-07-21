@@ -205,7 +205,7 @@ export const Homepage = () => {
           </div>
           <div className={style.preOrderDivImg}>
             <img
-              src="https://www.netmeds.com/pssets/gloryweb/images/icons/new-icons/previous_orders.svg"
+              src="https://www.netmeds.com/assets/gloryweb/images/icons/new-icons/previous_orders.svg"
               alt=""
             />
           </div>
@@ -234,14 +234,14 @@ export const Homepage = () => {
           </div>
           <div className={style.preOrderDivImg}>
             <img
-              src="https://www.netmeds.com/pssets/gloryweb/images/icons/new-icons/beauty_products.svg"
+              src="https://www.netmeds.com/assets/gloryweb/images/icons/new-icons/beauty_products.svg"
               alt=""
             />
           </div>
         </div>
       </div>
 
-      <div className={style.endHeadingGap}>
+       <div className={style.endHeadingGap}>
         <h2> Trending Today </h2>
       </div>
 
@@ -504,7 +504,7 @@ export const Homepage = () => {
             'Digital Healthcare Company of the year' in 2019.
           </p>
         </div>
-      </div>
+      </div> 
     </div>
   );
 };

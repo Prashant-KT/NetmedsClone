@@ -1,19 +1,17 @@
 {
-  "posts": [
+  "netmendsuserdata": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "number": "1",
+      "password": "1",
+      "userName": "1",
+      "id": 1
+    },
+    {
+      "number": "8898537085",
+      "password": "1234",
+      "userName": "Prashant",
+      "id": 2
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "netmedsproducts": []
 }

@@ -1,23 +1,46 @@
 import { Button, TextField } from "@mui/material";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
 import { Navbar } from "../Navbar/Navbar";
 import style from "./Signin.module.css";
+import  axios  from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { matchData } from "./loginRedux/loginaction";
 export const Signin = () => {
-  const[number, setNumber] = useState("")
+  const [number, setNumber] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const handleNumber = (e) =>{
-    alert(e.target.value)
-  }
-   const handlePassword = (e) => {
-     alert(e.target.value);
-   };
+  const data = useSelector((state) => state.loginState);
+  console.log(data);
 
-   const handlelogin = () =>{
-    alert("hi")
-   }
+
+  const handleNumber = (e) => {
+    setNumber(e.target.value);
+  };
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handlelogin = () => {
+    axios
+      .get(
+        `http://localhost:8080/netmendsuserdata?number=${number}&password=${password}`
+      )
+      .then((res) => {
+        if (res.data.length === 1) {
+         console.log(res.data[0].userName);
+         dispatch(matchData(res.data[0].userName));
+          navigate("/");
+        }
+        else{
+          alert("Credential not Matched");
+        }
+      })
+      
+  };
   return (
     <div>
       <Navbar position={"static"} />
@@ -66,7 +89,7 @@ export const Signin = () => {
               >
                 Submit
               </Button>
-              <Link to='/signup'>Create a new account</Link>
+              <Link to="/signup">Create a new account</Link>
             </div>
           </div>
         </div>

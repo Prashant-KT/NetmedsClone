@@ -248,7 +248,12 @@
     text-align: left;
     
 }
-.disciption> b,p{
+.disciption > p{
+    display: inline-block;
+    margin-bottom: 5px;
+    
+}
+.disciption > p{
     display: inline-block;
     margin-bottom: 5px;
     
