@@ -1,7 +1,6 @@
 import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import { trandingImages } from "./trending";
 import Slider from "react-slick";
 
 function SampleNextArrow(props) {
@@ -12,7 +11,6 @@ function SampleNextArrow(props) {
       style={{
         ...style,
         display: "block",
-        marginRight: "20px",
         zIndex: 1,
         background: "rgb(247,176,48)",
         borderRadius:"50%"
@@ -30,7 +28,6 @@ function SamplePrevArrow(props) {
       style={{
         ...style,
         display: "block",
-        marginLeft: "20px",
         zIndex: 1,
         background: "rgb(247,176,48)",
         borderRadius: "50%",
@@ -49,20 +46,21 @@ export const RunningSlider = ({images}) => {
     speed: 5000,
     slidesToShow: 3,
     swipeToSlide: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 5000,
     cssEase: "linear",
     autoplay: true,
-    slidesToScroll: 3,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    slidesToScroll: 1,
+    variableWidth: true,
+    nextArrow: <SamplePrevArrow />,
+    prevArrow: <SampleNextArrow />,
   };
   return (
     <div style={{ width: "96%", margin: "auto" }}>
       <Slider {...settings}>
         {images.map((el,ind) => {
           return (
-            <div key={ind} style={{ marginRight: "15px"}}>
-              <img src={el} style={{borderRadius:"10px"}} alt="slider"/>
+            <div key={ind} >
+              <img src={el} style={{borderRadius:"10px",margin:"0px 10px"}} alt="slider"/>
             </div>
           );
         })}
