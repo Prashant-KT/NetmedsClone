@@ -35,7 +35,7 @@ export const Navbar = ({ position }) => {
     <div>
       <div className={style.topFirstcont} style={{ position: `${position}` }}>
         <div className={style.topBox}>
-          <Link to="/home">
+          <Link to="/">
             <div className={style.homeLogo}>
               <img
                 src="https://www.netmeds.com/assets/gloryweb/images/home-logo-netmeds-new.svg"
@@ -72,12 +72,14 @@ export const Navbar = ({ position }) => {
             <div>Upload</div>
           </div>
           <div className={style.imgAndKey}>
-            <IconButton aria-label="cart">
-              <StyledBadge badgeContent={4}>
-                <ShoppingCartIcon style={{ color: "white", width: "40px" }} />
-              </StyledBadge>
-            </IconButton>
-            <div>Cart</div>
+            <Link to="/cart" className={style.imgAndKey}>
+              <IconButton aria-label="cart">
+                <StyledBadge badgeContent={1}>
+                  <ShoppingCartIcon style={{ color: "white", width: "40px" }} />
+                </StyledBadge>
+              </IconButton>
+              <div>Cart</div>
+            </Link>
           </div>
           <div className={style.imgAndKey}>
             <Link to="/signin" className={style.imgAndKey}>

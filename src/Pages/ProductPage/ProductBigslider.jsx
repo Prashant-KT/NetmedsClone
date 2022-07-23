@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import { Carousel } from "react-responsive-carousel";
 
-export const BigCommonSlider = ({ height }) => {
+export const ProductBigslider = ({height}) => {
   return (
     <Carousel
       showThumbs={false}
@@ -13,29 +13,19 @@ export const BigCommonSlider = ({ height }) => {
         style={{
           width: "100%",
           height: height,
-          
         }}
         alt=""
-        src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1657897132_Home_Bannerxgsdfgdsg.jpg"
+        src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1654247920_Wellness_Home_title.jpg"
       />
 
       <img
         style={{
           width: "100%",
           height: height,
-          zIndex:-1
+          zIndex: -1,
         }}
         alt=""
-        src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1656599646_Home_Bannervvvvv.jpg"
-      />
-
-      <img
-        style={{
-          width: "100%",
-          height: height,
-        }}
-        alt=""
-        src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1656599543_Home_Bannersgge.jpg"
+        src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1654249719_Wellness_home.jpg"
       />
 
       <img
@@ -44,7 +34,16 @@ export const BigCommonSlider = ({ height }) => {
           height: height,
         }}
         alt=""
-        src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1654275901_Web_Home_Kareenasdhdh.jpg"
+        src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1658299561_Inlife_Wellness_Web.jpg"
+      />
+
+      <img
+        style={{
+          width: "100%",
+          height: height,
+        }}
+        alt=""
+        src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1658299643_relispray_Wellness_Web.jpg"
       />
     </Carousel>
   );

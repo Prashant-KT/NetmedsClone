@@ -3,15 +3,478 @@
     {
       "number": "1",
       "password": "1",
-      "userName": "1",
+      "userName": "Roshan",
+      "id": 1
+    }
+  ],
+  "netmedsproducts": [
+    {
+      "title": "Sri Sri Tattva Pinda Taila 100 ml",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Sriveda Sattva Pvt Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/824303/sri_sri_tattva_pinda_taila_100_ml_0.jpg",
+      "mrp": "114.00",
+      "sp": "120.00",
       "id": 1
     },
     {
-      "number": "8898537085",
-      "password": "1234",
-      "userName": "Prashant",
+      "title": "Kapiva Wheat Grass Juice 1 ltr",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Adret Retail Pvt Ltd, (Kapiva)",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/821307/kapiva_wheat_grass_juice_1_ltr_0_2.jpg",
+      "mrp": "499.00",
+      "sp": "429.14",
       "id": 2
+    },
+    {
+      "title": "Himalaya Wellness Ashvagandha Tablet 60's",
+      "category": "Ayurvedic",
+      "seller": "Mkt: The Himalaya Drug Company",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/814310/himalaya_wellness_ashvagandha_tablet_60_s_0.jpg",
+      "mrp": "165.00",
+      "sp": "133.00",
+      "id": 3
+    },
+    {
+      "title": "Dabur Honitus Herbal Cough Remedy Syrup 100 ml",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Dabur India Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/15912/dabur_honitus_herbal_cough_remedy_syrup_100_ml_0.jpg",
+      "mrp": "103.00",
+      "sp": "100.00",
+      "id": 4
+    },
+    {
+      "title": "Dr.Vaidya's Herbo 24 Turbo Plus Capsule 30's",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Herbolab India Pvt Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/919949/dr_vaidyas_herbo_24_turbo_plus_capsule_30s_0_0.jpg",
+      "mrp": "450.00",
+      "sp": "350.00",
+      "id": 5
+    },
+    {
+      "title": "Patanjali Honey 500 gm",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Patanjali Ayurved Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/406031/patanjali_honey_500_gm_0.jpg",
+      "mrp": "180.00",
+      "sp": "150.00",
+      "id": 6
+    },
+    {
+      "title": "Patanjali Special Chyawanprash 500 gm",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Patanjali Ayurved Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/406038/patanjali_special_chyawanprash_500_gm_0.jpg",
+      "mrp": "145.00",
+      "sp": "142.10",
+      "id": 7
+    },
+    {
+      "title": "Patanjali Divya Swasari Coronil Kit",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Patanjali Ayurved Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/947142/patanjali_divya_swasari_coronil_kit_0_0.jpg",
+      "mrp": "545.00",
+      "sp": "500.00",
+      "id": 8
+    },
+    {
+      "title": "Patanjali Balm 10 gm",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Patanjali Ayurved Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/802732/patanjali_balm_10_gm_0.jpg",
+      "mrp": "25.00",
+      "sp": "24.50",
+      "id": 9
+    },
+    {
+      "title": "Patanjali Badam Pak 500 gm",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Patanjali Ayurved Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/801709/patanjali_badam_pak_500_gm_0.jpg",
+      "mrp": "250.00",
+      "sp": "237.50",
+      "id": 10
+    },
+    {
+      "title": "Patanjali Anti Wrinkle Cream 50 gm",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Patanjali Ayurved Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/408520/patanjali_anti_wrinkle_cream_50_gm_0.jpg",
+      "mrp": "150.00",
+      "sp": "140.00",
+      "id": 11
+    },
+    {
+      "title": "Patanjali Ekangveer Ras Powder 10 gm",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Patanjali Ayurved Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/801773/patanjali_ekangveer_ras_powder_10_gm_0.jpg",
+      "mrp": "56.00",
+      "sp": "39.20",
+      "id": 12
+    },
+    {
+      "title": "Lama Ayush kwath Tablet 60's",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Lama Pharmaceuticals",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/915685/lama_ayush_kwath_tablet_60s_0_0.jpg",
+      "mrp": "150.00",
+      "sp": "112.50",
+      "id": 13
+    },
+    {
+      "title": "Lama Draksharist Tonic 450 ml",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Lama Pharmaceuticals",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/905933/lama_draksharist_tonic_450_ml_0_1.jpg",
+      "mrp": "185.00",
+      "sp": "138.75",
+      "id": 14
+    },
+    {
+      "title": "Lama Swarn Bhasm (Swarn Yukt) 500 mg",
+      "category": "Ayurvedic",
+      "seller": "Mkt: Lama Pharmaceuticals",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/907611/lama_swarn_bhasm_swarn_yukt_500_mg_0_0.jpg",
+      "mrp": "480",
+      "sp": "320",
+      "id": 15
+    },
+    {
+      "title": "PACTOL 650mg Tablet 10'S",
+      "category": "Allopathic",
+      "seller": "Mkt: West Coast Pharmaceuticals Works Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/905484/pactol_650mg_tablet_10s_0_0.jpg",
+      "mrp": "20.00",
+      "sp": "16.00",
+      "id": 16
+    },
+    {
+      "title": "ELUGIA Cleanser 125ml",
+      "category": "Allopathic",
+      "seller": "Mkt: Hbc Lifesciences Pvt Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/948780/elugia_cleanser_125ml_0_0.jpg",
+      "mrp": "205.00",
+      "sp": "164.00",
+      "id": 17
+    },
+    {
+      "title": "Ecosprin AV 150mg Capsule 15'S",
+      "category": "Allopathic",
+      "seller": "Mkt: Usv Private Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/406518/ecosprin_av_150mg_capsule_15s_0_0.jpg",
+      "mrp": "55.87",
+      "sp": "44.70",
+      "id": 18
+    },
+    {
+      "title": "Caleat TH Tablet 10'S",
+      "category": "Allopathic",
+      "seller": "Mkt: Dr Johns Laboratories Pvt Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/852274/caleat_th_tablet_10_s_0.jpg",
+      "mrp": "178.50",
+      "sp": "142.80",
+      "id": 19
+    },
+    {
+      "title": "Dolo 250mg Suspension 60ml",
+      "category": "Allopathic",
+      "seller": "Mkt: Micro Labs Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/314768/dolo_250mg_suspension_60ml_0.jpg",
+      "mrp": "40.32",
+      "sp": "32.26",
+      "id": 20
+    },
+    {
+      "title": "Calcimax Forte+ Tablet 30's",
+      "category": "Allopathic",
+      "seller": "Mkt: Meyer Organics Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/858212/calcimax_forte_tablet_30_s_0.jpg",
+      "mrp": "270.50",
+      "sp": "216.40",
+      "id": 21
+    },
+    {
+      "title": "Aciloc 150mg Tablet 30'S",
+      "category": "Allopathic",
+      "seller": "Mkt: Cadila Pharmaceuticals Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/329135/aciloc_150mg_tablet_30_s_0.jpg",
+      "mrp": "380",
+      "sp": "300.00",
+      "id": 22
+    },
+    {
+      "title": "Stamlo 5mg Tablet 30'S",
+      "category": "Allopathic",
+      "seller": "Mkt: Dr Reddy'S Laboratories Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/412914/stamlo_5mg_tablet_30_s_0.jpg",
+      "mrp": "96.98",
+      "sp": "77.58",
+      "id": 23
+    },
+    {
+      "title": "CTD 6.25mg Tablet 15'S",
+      "category": "Allopathic",
+      "seller": "Mkt: Ipca Laboratories Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/406459/ctd_6_25mg_tablet_15s_396259_1_0.jpg",
+      "mrp": "93.55",
+      "sp": "74.84",
+      "id": 24
+    },
+    {
+      "title": "Myospaz Forte Tablet 10'S",
+      "category": "Allopathic",
+      "seller": "Mkt: Win Medicare Pvt Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/371027/myospaz_forte_tablet_10_s_0.jpg",
+      "mrp": "280.00",
+      "sp": "224.00",
+      "id": 25
+    },
+    {
+      "title": "PANDRIVE D Tablet 10's",
+      "category": "Allopathic",
+      "seller": "Mkt: Brochem Healthcare Pvt Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/1020439/pandrive_d_tablet_10s_310380_0_7.jpg",
+      "mrp": "90.00",
+      "sp": "72.00",
+      "id": 26
+    },
+    {
+      "title": "Omez 20mg Capsule 20'S",
+      "category": "Allopathic",
+      "seller": "Mkt: Dr Reddy'S Laboratories Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/412184/omez_20mg_capsule_20_s_0.jpg",
+      "mrp": "61.48",
+      "sp": "49.18",
+      "id": 27
+    },
+    {
+      "title": "Uricare 100mg Tablet 10'S",
+      "category": "Allopathic",
+      "seller": "Mkt: East West Pharmaceuticals Pvt Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/848125/uricare_100mg_tablet_10s_0_0.jpg",
+      "mrp": "18.69",
+      "sp": "14.95",
+      "id": 28
+    },
+    {
+      "title": "Alprax Plus Tablet 10'S",
+      "category": "Allopathic",
+      "seller": "Mkt: Torrent Pharmaceuticals Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/351049/alprax_plus_tablet_10s_0_1.jpg",
+      "mrp": "65.00",
+      "sp": "61.36",
+      "id": 29
+    },
+    {
+      "title": "Angispan TR 2.5mg Capsule 25'S",
+      "category": "Allopathic",
+      "seller": " Mkt: Usv Private Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/52818/angispan_tr_2_5mg_capsule_25s_0_0.jpg",
+      "mrp": "198.00",
+      "sp": "158.40",
+      "id": 30
+    },
+    {
+      "title": "Revital H Woman Tablet 30'S",
+      "category": " Fitness",
+      "seller": "Mkt: Sun Pharmaceutical",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/407923/revital_h_woman_tablet_30_s_0.jpg",
+      "mrp": "345.00",
+      "sp": "293.25",
+      "id": 31
+    },
+    {
+      "title": "Wellbeing Nutrition Melts into a Restful Sleep Oral Thin",
+      "category": "Fitness",
+      "seller": "Mkt: Nutritionalab Pvt. Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/954870/wellbeing_nutrition_melts_into_a_restful_sleep_oral_thin_strip_30s_0_0.jpg",
+      "mrp": "649.00",
+      "sp": "551.65",
+      "id": 32
+    },
+    {
+      "title": "100% Plant Based Vegan Collagen Builder ",
+      "category": "Fitness",
+      "seller": "Mkt: GMN HEALTHCARE",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/950649/pro360_100_plant_based_vegan_collagen_builder_unflavored_250_gm_182446_0_2.jpg",
+      "mrp": "999.00",
+      "sp": "899.10",
+      "id": 33
+    },
+    {
+      "title": "Ensure Diabetes Care Powder",
+      "category": "Fitness",
+      "seller": "Mkt: Abbott Healthcare Pvt Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/902372/ensure_diabetes_care_powder_vanilla_flavour_1_kg_refill_pack_0_0.jpg",
+      "mrp": "1550.00",
+      "sp": "1450.00",
+      "id": 34
+    },
+    {
+      "title": "2baconil TTS20 14mg Patch 7'S",
+      "category": "Fitness",
+      "seller": "Mkt: Rusan Health Care Pvt Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/368144/2baconil_tts20_14mg_patch_7_s_0.jpg",
+      "mrp": "665.00",
+      "sp": "532.00",
+      "id": 35
+    },
+    {
+      "title": "2BACONIL 2 mg Chew Gum - Icy Mint 10's",
+      "category": "Fitness",
+      "seller": "Mkt: Rusan Health Care Pvt Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/891392/2baconil_2_mg_chew_gum_icy_mint_10_s_0.jpg",
+      "mrp": "66.00",
+      "sp": "59.40",
+      "id": 36
+    },
+    {
+      "title": "D Protin Vanilla Powder 500 gm",
+      "category": "Fitness",
+      "seller": "Mkt: British Biologicals",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/356552/d_protin_vanilla_powder_500_gm_0.jpg",
+      "mrp": "595.00",
+      "sp": "487.90",
+      "id": 37
+    },
+    {
+      "title": "NUTRILITE DAILY TABLET 120'S",
+      "category": "Fitness",
+      "seller": "Mkt: Amway India Enterprises",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/813644/nutrilite_daily_tablet_120s_0_0.jpg",
+      "mrp": "2403.00",
+      "sp": "2114.64",
+      "id": 38
+    },
+    {
+      "title": "Pediasure Nutrition Powder",
+      "category": "Fitness",
+      "seller": "Mkt: Abbott Healthcare Pvt Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/14617/pediasure_nutrition_powder_premium_chocolate_flavour_400_gm_refill_pack_0_4.jpg",
+      "mrp": "590.00",
+      "sp": "554.60",
+      "id": 39
+    },
+    {
+      "title": "INLIFE Vitamin B12 Tablets 60's",
+      "category": "Fitness",
+      "seller": "Mkt: Inlife Pharma Private Limited",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/858136/inlife_vitamin_b12_tablets_60s_77968_0_1.jpg",
+      "mrp": "600.00",
+      "sp": "478.80",
+      "id": 40
+    },
+    {
+      "title": "INLIFE Apple Cider Vinegar",
+      "category": "Fitness",
+      "seller": "Mkt: Inlife Pharma Private Limited",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/858560/inlife_apple_cider_vinegar_with_garlic_ginger_lemon_honey_mother_of_vinegar_500_ml_78282_0_1.jpg",
+      "mrp": "699.00",
+      "sp": "489.30",
+      "id": 41
+    },
+    {
+      "title": "Organic India Ashwagandha Veg Capsules 60's",
+      "category": "Fitness",
+      "seller": "Mkt: Organic India Pvt Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/408353/organic_india_ashwagandha_veg_capsules_60_s_0.jpg",
+      "mrp": "205.00",
+      "sp": "194.75",
+      "id": 42
+    },
+    {
+      "title": "AS-IT-IS Nutrition Whey Protein Concentrate Powder",
+      "category": "Fitness",
+      "seller": "Mkt: As-It-Is Nutrition",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/860455/as_it_is_nutrition_whey_protein_concentrate_powder_unflavored_powder_1_kg_0.jpg",
+      "mrp": "2599.00",
+      "sp": "2079.20",
+      "id": 43
+    },
+    {
+      "title": "Sugarfree Sweetener Stevia",
+      "category": "Fitness",
+      "seller": "Mkt: Herboveda India",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/828507/so_sweet_100_natural_sugarfree_sweetener_stevia_spoonable_powder_1000_gm_0_1.jpg",
+      "mrp": "1500.00",
+      "sp": "1125.00",
+      "id": 44
+    },
+    {
+      "title": "Fast&Up Omega-3 Essentials Softgel 60's",
+      "category": "Fitness",
+      "seller": "Mkt: Aeronutrix Sports Product",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/996977/fast_up_omega_3_essentials_softgel_60s_0_0.jpg",
+      "mrp": "500.00",
+      "sp": "400.00",
+      "id": 45
+    },
+    {
+      "title": "Fingertip Pulse Oximeter",
+      "category": "Devices",
+      "seller": "Mkt: Meet Imports",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/947286/fingertip_pulse_oximeter_mi303_0_0.jpg",
+      "mrp": "4499.00",
+      "sp": "1349.70",
+      "id": 46
+    },
+    {
+      "title": "AccuSure Blood Pressure",
+      "category": "Devices",
+      "seller": "Mkt: Microgene Diagnostic ",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/857452/accusure_blood_pressure_monitor_ts_0.jpg",
+      "mrp": "2995.00",
+      "sp": "1377.70",
+      "id": 47
+    },
+    {
+      "title": "Omron Blood Pressure Cuff",
+      "category": "Devices",
+      "seller": "Mkt: Omron Healthcare Co Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/408251/omron_blood_pressure_cuff_hem_cl24_l_0.jpg",
+      "mrp": "850.00",
+      "sp": "765.00",
+      "id": 48
+    },
+    {
+      "title": "Accu-Chek Guide Wireless Glucometer",
+      "category": "Devices",
+      "seller": "Mkt: Roche Diabetes Care India",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/948854/accu_chek_guide_wireless_glucometer_kit_with_10s_test_strips_accu_chek_guide_test_strips_10s_free_0_1.jpg",
+      "mrp": "2249.00",
+      "sp": "2024.10",
+      "id": 49
+    },
+    {
+      "title": "Omron Automatic Blood Pressure Monitor",
+      "category": "Devices",
+      "seller": "Mkt: Omron Healthcare Co Ltd",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/15590/omron_automatic_blood_pressure_monitor_hem_7120_0_2.jpg",
+      "mrp": "2330.00",
+      "sp": "1864.00",
+      "id": 50
+    },
+    {
+      "title": "Accu-Chek Active Test Strips 50's",
+      "category": "Devices",
+      "seller": "Mkt: Roche Diabetes Care India",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/15580/accu_chek_active_test_strips_50s_0_1.jpg",
+      "mrp": "975.00",
+      "sp": "838.50",
+      "id": 51
+    },
+    {
+      "title": "AccuSure Simple Gluco Test Strip 25's",
+      "category": "Devices",
+      "seller": "Mkt: Microgene Diagnostic ",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/857448/accusure_simple_gluco_test_strip_25_s_0.jpg",
+      "mrp": "595.00",
+      "sp": "446.25",
+      "id": 52
     }
-  ],
-  "netmedsproducts": []
+  ]
 }
