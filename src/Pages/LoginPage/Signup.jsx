@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Footer } from "../Footer/Footer";
 import { Navbar } from "../Navbar/Navbar";
 import style from "./Signup.module.css";
-import { LoadingButton } from "@mui/lab";
+import CircularProgress from '@mui/material/CircularProgress';
 
 import { useNavigate } from "react-router-dom";
 
@@ -56,13 +56,8 @@ export const Signup = () => {
     <>
       <Navbar position={"static"} />
       {loading ? (
-        <LoadingButton
-          loadingIndicator="Loading…"
-          variant="outlined"
-          style={{ fontSize: "50px", color: "orange" }}
-        >
-          Loading.....
-        </LoadingButton>
+       
+        <CircularProgress disableShrink />
       ) : (
         <div>
           <div className={style.signinCont}>

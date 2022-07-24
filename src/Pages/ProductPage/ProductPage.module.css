@@ -1,17 +1,17 @@
+.bottomBigContainer {
+    height: 1400px;
+    width: 96%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
 .sliderContainerBoxx{
     width: 98%;
     height: 350px;
     margin: auto;
-    border: 1px solid red;
 }
-.sortAllDiv{
-    height: 1000px;
-    width: 97%;
-    margin: auto;
-    border: 1px solid red;
-    display: flex;
-    justify-content: space-between;
-}
+
 .leftFilterDiv{
     width: 17%;
     padding: 6px;
@@ -19,22 +19,25 @@
 
 .leftFilterDivFirst{
     width: 100%;
-    height: 360px;
+    height: 280px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .leftFilterDivSecond{
-    margin-top: 30px;
+    position: sticky;
+    top: 0;
+    margin-top: 40px;
     width: 100%;
-    height: 560px;
+    height: 360px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background-color: white;
 }
 
 .rightProductDiv {
-    width: 79%;
-    padding: 12px;
-    border: 1px solid black;
+    width: 81%;
+    padding-top: 5px;
+    
 }
+
 .makeSortParent{
     display: flex;
     justify-content: space-between;
@@ -74,4 +77,132 @@
     color: #151b39;
     padding: 20px;
     border-bottom: 2px solid rgba(21, 27, 57, .04);
+}
+.hftype{
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: .8;
+    text-align: left;
+    color: rgb(231, 49, 38);
+    padding: 5px 12px 18px 18px;
+    border-bottom: 2px solid rgba(21, 27, 57, .04);
+}
+.checkboxNlabel{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #151b39;
+
+}
+.checkboxNlabel>input[type=checkbox]{
+    height: 20px;
+    width: 50px;
+    margin-left: -15px;
+}
+
+.fourProdCont{
+    width: 96%;
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.fourProdCont > div{
+    width:23%;
+    height: 400px;
+    padding: 5px;
+    border: solid 1px rgba(112, 112, 112, .38);
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.productImage{
+    width: 95%;
+    margin: auto;
+}
+.productTitle{
+    font-size: 16px;
+    font-weight: 500;
+    color: #151b39;
+    display: block;
+    margin: 6px 10px;
+    text-align: left;
+    height: 47px;
+    overflow: hidden;
+}
+.productCategory {
+    color: #24aeb1;
+    font-size: 13px;
+    width: 60px;
+    line-height: 18px;
+    background: #f3f7fb;
+    border-radius: 40px;
+    padding: 5px 15px;
+    display: inline-block;
+    margin: 8px 0px 10px 10px;
+    display: flex;
+    align-items: flex-start;
+
+}
+.productMenufec{
+    text-align: left;
+    width: auto;
+    display: block;
+    font-style: italic;
+    line-height: 16px;
+    color: #6f7284;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 3px 0 5px 10px;
+    white-space: nowrap;
+}
+.productSellingPrice{
+    font-size: 18px;
+    color: #6f7284!important;
+    width: 100%;
+    display: block;
+    font-weight: 500;
+    text-align: left;
+    margin: 10px 0px 15px 10px;
+}
+.productSellingp{
+    color: #ef4281;
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.productCostPrice{
+    font-size: 16px;
+    color: #6f7284 !important;
+    width: 100%;
+    display: block;
+    font-weight: 400;
+    text-align: left;
+    margin: -10px 0 15px 10px;
+}
+.productCP{
+    text-decoration: line-through;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.productCartButton{
+    background: #24aeb1;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 11px 0px 10px;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-family:cursive;
+    cursor: pointer;
 }

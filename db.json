@@ -5,6 +5,18 @@
       "password": "1",
       "userName": "Roshan",
       "id": 1
+    },
+    {
+      "number": "2",
+      "password": "2",
+      "userName": "Prashant",
+      "id": 2
+    },
+    {
+      "number": "884",
+      "password": "1234",
+      "userName": "Gajju",
+      "id": 3
     }
   ],
   "netmedsproducts": [
@@ -200,9 +212,9 @@
     {
       "title": "Aciloc 150mg Tablet 30'S",
       "category": "Allopathic",
-      "seller": "Mkt: Cadila Pharmaceuticals Ltd",
-      "img": "https://www.netmeds.com/images/product-v1/150x150/329135/aciloc_150mg_tablet_30_s_0.jpg",
-      "mrp": "380",
+      "seller": "Mkt: Cadila Pharmaceuticals",
+      "img": "https://www.netmeds.com/images/product-v1/150x150/892521/antoxid_p_tablet_15s_0_2.jpg",
+      "mrp": "380.00",
       "sp": "300.00",
       "id": 22
     },
