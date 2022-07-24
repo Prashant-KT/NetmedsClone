@@ -55,6 +55,7 @@
 }
 .sortby{
     background-color: white;
+    border: 1px solid rgb(61, 248, 220);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     height: 15px;
     width: 125px;
@@ -63,8 +64,9 @@
 }
 
 .sortby:hover{
-    color: rgb(6, 246, 210);
+    color: rgb(246, 54, 6);
     border: 1px solid rgb(61, 248, 220);
+    cursor: pointer;
 }
 
  .hfheading{

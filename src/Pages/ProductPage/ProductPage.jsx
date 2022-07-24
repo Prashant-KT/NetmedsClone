@@ -8,8 +8,11 @@ import CircularProgress from "@mui/material/CircularProgress";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import ArrowBackIosNewSharpIcon from "@mui/icons-material/ArrowBackIosNewSharp";
 import {
+  filterProducts,
   getProductsRequest,
   getProductsSuccess,
+  sortProductHighToLow,
+  sortProductLowToHigh,
 } from "../ProductRedux/productAction";
 import { useSearchParams } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
@@ -18,27 +21,49 @@ export const ProductPage = () => {
   const dispatch = useDispatch();
    const [searchParams, setSearchParams] = useSearchParams();
    const [page, setPage] = useState(+searchParams.get("_page") || 1);
+   const [def,setDef] = useState(1);
   const { isLoading, products } = useSelector((state) => state.productDetails);
+
+
+  // to show num of content on page
   let curritem = page *16;
   if(curritem > 60){
     curritem = 62
   }
+
+
   useEffect(() => {
-    setSearchParams({_page: page});
+    setSearchParams({ _page: page });
     dispatch(getProductsRequest());
     setTimeout(() => {
       dispatch(getProductsSuccess(page));
     }, 300);
-  }, [dispatch, page]);
+  }, [dispatch, page, setSearchParams,def]);
 
   function handleFilter(e) {
-    console.log(e.target.checked);
+    // console.log(e.target.checked);
+    if(e.target.checked){
+      let filter_item = e.target.id;
+     
+      // dispatch(filterProducts(filter_item))
+
+    }
   }
 
   function paginate(a) {
     setPage(page+a)
   }
 
+  function handleSortDefault() {
+    setDef(def+1)
+  }
+
+  function handleSortHighToLow() {
+    dispatch(sortProductHighToLow());
+  }
+function handleSortLowToHigh() {
+  dispatch(sortProductLowToHigh());
+}
   return (
     <>
       {isLoading ? (
@@ -133,11 +158,15 @@ export const ProductPage = () => {
                 </div>
                 <div>
                   <span>Sort by: </span>
-                  <span onClick={() => alert("hi")} className={style.sortby}>
+                  <span className={style.sortby} onClick={handleSortDefault}>
                     Popularity
                   </span>
-                  <span className={style.sortby}>High to Low</span>
-                  <span className={style.sortby}>Low to High</span>
+                  <span className={style.sortby} onClick={handleSortHighToLow}>
+                    High to Low
+                  </span>
+                  <span className={style.sortby} onClick={handleSortLowToHigh}>
+                    Low to High
+                  </span>
                 </div>
               </div>
               {/* right side product side UI showing Products */}

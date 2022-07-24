@@ -1,4 +1,4 @@
-import { GET_PRODUCTS_FAILURE, GET_PRODUCTS_REQUEST, GET_PRODUCTS_SUCCESS } from "./productAction";
+import { FILTER_PRODUCTS, GET_PRODUCTS_FAILURE, GET_PRODUCTS_REQUEST, GET_PRODUCTS_SUCCESS, SORT_HIGH_TO_LOW, SORT_LOW_TO_HIGH } from "./productAction";
 
 let initial = {
   cartItems: 0,
@@ -29,7 +29,32 @@ export const productReducer = (state = initial, { type, payload }) => {
              return {
                ...state,
                isLoading: false,
-               isError:true,
+               isError: true,
+             };
+           }
+
+           case SORT_HIGH_TO_LOW: {
+             return {
+               ...state,
+               isLoading: false,
+               isError: false,
+               products: [...state.products].sort((a, b) => b.sp - a.sp),
+             };
+           }
+           case SORT_LOW_TO_HIGH: {
+             return {
+               ...state,
+               isLoading: false,
+               isError: false,
+               products: [...state.products].sort((a, b) => a.sp - b.sp),
+             };
+           }
+           case FILTER_PRODUCTS: {
+             return {
+               ...state,
+               isLoading: false,
+               isError: false,
+               products: [...state.products].sort((a, b) => a.sp - b.sp),
              };
            }
 
@@ -37,3 +62,4 @@ export const productReducer = (state = initial, { type, payload }) => {
              return state;
          }
 };
+// [...state.products].sort((a, b) => a.sp - b.sp);
