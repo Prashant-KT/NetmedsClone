@@ -1,5 +1,5 @@
 .bottomBigContainer {
-    height: 1400px;
+    height: auto;
     width: 96%;
     margin: auto;
     display: flex;
@@ -205,4 +205,24 @@
     text-transform: uppercase;
     font-family:cursive;
     cursor: pointer;
+}
+
+.bottomPagination{
+    width: 76%;
+    margin-left: 20%;
+    border-radius: 10px;
+    height: 50px;
+    padding: 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+    border-bottom: 1px solid rgba(112, 112, 112, .38);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.bottomPagination > button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
 }

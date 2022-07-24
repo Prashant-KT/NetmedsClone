@@ -5,30 +5,40 @@ import { ProductBigslider } from "./ProductBigslider";
 import style from "./ProductPage.module.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CircularProgress from "@mui/material/CircularProgress";
-
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import ArrowBackIosNewSharpIcon from "@mui/icons-material/ArrowBackIosNewSharp";
 import {
   getProductsRequest,
   getProductsSuccess,
 } from "../ProductRedux/productAction";
 import { useSearchParams } from "react-router-dom";
+import { Footer } from "../Footer/Footer";
 
 export const ProductPage = () => {
   const dispatch = useDispatch();
    const [searchParams, setSearchParams] = useSearchParams();
-   const [page, setPage] = useState(+searchParams.get("_page") || 2);
+   const [page, setPage] = useState(+searchParams.get("_page") || 1);
   const { isLoading, products } = useSelector((state) => state.productDetails);
-
+  let curritem = page *16;
+  if(curritem > 60){
+    curritem = 62
+  }
   useEffect(() => {
-    setSearchParams({ _page: page,_limit:4 });
+    setSearchParams({_page: page});
     dispatch(getProductsRequest());
     setTimeout(() => {
-      dispatch(getProductsSuccess());
+      dispatch(getProductsSuccess(page));
     }, 300);
-  }, [dispatch]);
+  }, [dispatch, page]);
 
   function handleFilter(e) {
     console.log(e.target.checked);
   }
+
+  function paginate(a) {
+    setPage(page+a)
+  }
+
   return (
     <>
       {isLoading ? (
@@ -119,7 +129,7 @@ export const ProductPage = () => {
               {/* right side product side UI */}
               <div className={style.makeSortParent}>
                 <div>
-                  Showing <b>25</b> of <b>62</b> items
+                  Showing <b>{curritem}</b> of <b>{62}</b> items
                 </div>
                 <div>
                   <span>Sort by: </span>
@@ -163,6 +173,15 @@ export const ProductPage = () => {
               </div>
             </div>
           </div>
+          <div className={style.bottomPagination}>
+            <button disabled={page === 1} onClick={() => paginate(-1)}>
+              <ArrowBackIosNewSharpIcon sx={{ fontSize: 40 }} />
+            </button>
+            <button disabled={page === 4} onClick={() => paginate(1)}>
+              <ArrowForwardIosSharpIcon sx={{ fontSize: 40 }} />
+            </button>
+          </div>
+          <Footer />
         </>
       )}
     </>

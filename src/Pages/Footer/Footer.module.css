@@ -72,6 +72,7 @@ ul{
 }
 .appStore>img{
     width: 49%;
+    /* height: 45px; */
     cursor: pointer;
 }
 @media only screen and (max-width: 800px) {
