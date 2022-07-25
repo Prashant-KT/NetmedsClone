@@ -5,7 +5,7 @@ import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -21,15 +21,20 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export const Navbar = ({ position }) => {
     const userName = useSelector((state) => state.loginState.userName);
-
+    const noOfItemInCart = useSelector((state) => state.productDetails.noOfItemInCart)
+    const navigate = useNavigate()
   function handleSearch(e) {
     if (e.key === "Enter") {
+      navigate('/products')
       console.log(e.target.value, "by enter");
     }
   }
 
   function handleDebounce(e) {
-    console.log(e.target.value);
+
+   
+    // console.log(e.target.value);
+    
   }
   return (
     <div>
@@ -74,7 +79,7 @@ export const Navbar = ({ position }) => {
           <div className={style.imgAndKey}>
             <Link to="/cart" className={style.imgAndKey}>
               <IconButton aria-label="cart">
-                <StyledBadge badgeContent={1}>
+                <StyledBadge badgeContent={noOfItemInCart}>
                   <ShoppingCartIcon style={{ color: "white", width: "40px" }} />
                 </StyledBadge>
               </IconButton>

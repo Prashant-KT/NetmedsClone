@@ -11,12 +11,6 @@
       "password": "2",
       "userName": "Prashant",
       "id": 2
-    },
-    {
-      "number": "884",
-      "password": "1234",
-      "userName": "Gajju",
-      "id": 3
     }
   ],
   "netmedsproducts": [
@@ -488,5 +482,7 @@
       "sp": "446.00",
       "id": 52
     }
+  ],
+  "netmedscart": [
   ]
 }

@@ -8,7 +8,7 @@ import { trandingImages } from "./trending";
 import { newArrivalSlider } from "./newArrivals";
 import { RunningSlider } from "./RunningSlider/RunningSlider";
 import { CircularProgress } from "@mui/material";
-
+import {Footer} from '../Footer/Footer'
 export const Homepage = () => {
   const [loading, setLoading] = useState(true);
   const [show, setShow] = useState(true);
@@ -123,7 +123,7 @@ export const Homepage = () => {
           <div className={style.threeCardProduct}>
             <div>
               <img
-                src="https://www.netmeds.com/pssets/gloryweb/images/icons/Wellnessnew.svg"
+                src="https://www.netmeds.com/assets/gloryweb/images/icons/Wellnessnew.svg"
                 alt=""
               />
               <span className={style.contenttxt}>
@@ -132,8 +132,8 @@ export const Homepage = () => {
               </span>
             </div>
             <div>
-              <img
-                src="https://www.netmeds.com/pssets/gloryweb/images/icons/Beautynew.svg"
+              <img 
+                src="https://www.netmeds.com/assets/gloryweb/images/icons/Beautynew.svg"
                 alt=""
               />
               <span className={style.contenttxt}>
@@ -143,7 +143,7 @@ export const Homepage = () => {
             </div>
             <div>
               <img
-                src="https://www.netmeds.com/pssets/gloryweb/images/icons/ordermedicinnew.svg"
+                src="https://www.netmeds.com/assets/gloryweb/images/icons/ordermedicinnew.svg"
                 alt=""
               />
               <span className={style.contenttxt}>
@@ -520,6 +520,7 @@ export const Homepage = () => {
           </div>
         </div>
       )}
+      <Footer/>
     </>
   );
 };

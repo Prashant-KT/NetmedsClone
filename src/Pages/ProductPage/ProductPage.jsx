@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+
 import { Navbar } from "../Navbar/Navbar";
 import { ProductBigslider } from "./ProductBigslider";
 import style from "./ProductPage.module.css";
@@ -8,6 +9,8 @@ import CircularProgress from "@mui/material/CircularProgress";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import ArrowBackIosNewSharpIcon from "@mui/icons-material/ArrowBackIosNewSharp";
 import {
+  addToTempCart,
+  changeCartCounter,
   filterProducts,
   getProductsRequest,
   getProductsSuccess,
@@ -16,6 +19,8 @@ import {
 } from "../ProductRedux/productAction";
 import { useSearchParams } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
+import axios from 'axios';
+
 
 export const ProductPage = () => {
   const dispatch = useDispatch();
@@ -33,7 +38,7 @@ export const ProductPage = () => {
 
 
   useEffect(() => {
-    setSearchParams({ _page: page });
+    setSearchParams({ _page: page, });
     dispatch(getProductsRequest());
     setTimeout(() => {
       dispatch(getProductsSuccess(page));
@@ -42,11 +47,12 @@ export const ProductPage = () => {
 
   function handleFilter(e) {
     // console.log(e.target.checked);
+    //  dispatch(getProductsRequest());
     if(e.target.checked){
       let filter_item = e.target.id;
-     
-      // dispatch(filterProducts(filter_item))
-
+       dispatch(filterProducts(page,filter_item))
+    }else{
+      dispatch(getProductsSuccess(page));
     }
   }
 
@@ -61,9 +67,24 @@ export const ProductPage = () => {
   function handleSortHighToLow() {
     dispatch(sortProductHighToLow());
   }
-function handleSortLowToHigh() {
-  dispatch(sortProductLowToHigh());
-}
+  function handleSortLowToHigh() {
+    dispatch(sortProductLowToHigh());
+  }
+
+  async function handleCart(id) {
+    let res = await axios.get(`http://localhost:8080/netmedsproducts/${id}`);
+    let cartItem = res.data;
+     dispatch(addToTempCart(cartItem));
+      dispatch(changeCartCounter(1));
+      alert("added")
+      
+    // axios.post("http://localhost:8080/netmedscart",cartItem).then((el)=>{
+    //   alert("Added")
+    // }).then(()=>{
+    //   dispatch(changeCartCounter(1))
+    // })
+  }
+
   return (
     <>
       {isLoading ? (
@@ -190,9 +211,11 @@ function handleSortLowToHigh() {
                         <span>MRP </span>
                         <span className={style.productCP}> Rs {el.mrp} </span>
                       </div>
+
                       <button
                         className={style.productCartButton}
-                        onClick={() => console.log(el.id)}
+                        onClick={() => handleCart(el.id)}
+                       
                       >
                         ADD TO CART
                       </button>

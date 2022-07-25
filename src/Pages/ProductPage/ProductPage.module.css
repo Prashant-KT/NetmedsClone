@@ -114,7 +114,8 @@
     padding: 2%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+   
 }
 .fourProdCont > div{
     width:23%;
@@ -124,6 +125,7 @@
     background-color: #fff;
     border-radius: 8px;
     margin-top: 20px;
+    margin-right: 5px;
 }
 
 .productImage{
