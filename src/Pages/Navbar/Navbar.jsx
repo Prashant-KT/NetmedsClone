@@ -5,7 +5,7 @@ import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -33,7 +33,7 @@ export const Navbar = ({ position }) => {
   function handleDebounce(e) {
 
    
-    // console.log(e.target.value);
+      navigate("/products");
     
   }
   return (

@@ -17,7 +17,7 @@ import {
   sortProductHighToLow,
   sortProductLowToHigh,
 } from "../ProductRedux/productAction";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
 import axios from 'axios';
 
@@ -28,6 +28,8 @@ export const ProductPage = () => {
    const [page, setPage] = useState(+searchParams.get("_page") || 1);
    const [def,setDef] = useState(1);
   const { isLoading, products } = useSelector((state) => state.productDetails);
+  const isAuth = useSelector((state) => state.loginState.isAuth);
+  const navigate = useNavigate()
 
 
   // to show num of content on page
@@ -72,6 +74,13 @@ export const ProductPage = () => {
   }
 
   async function handleCart(id) {
+
+    if(!isAuth){
+      alert("You need to login first")
+      
+      return navigate("/signin");
+    }
+
     let res = await axios.get(`http://localhost:8080/netmedsproducts/${id}`);
     let cartItem = res.data;
     dispatch(addToTempCart(cartItem));

@@ -9,6 +9,8 @@ export const SORT_LOW_TO_HIGH = "SORT_LOW_TO_HIGH";
 export const CHANGE_CART_COUNTER = "CHANGE_CART_COUNTER";
 export const ADD_TEMP_CART = "ADD_TEMP_CART";
 export const DELETE_CART_ITEM = "DELETE_CART_ITEM";
+export const FINAL_SELLING_PRICE = "FINAL_SELLING_PRICE";
+
 
 export const getProductsRequest = () => {
   return {
@@ -83,5 +85,12 @@ export const deleteCartItem = (id)=>{
   return{
     type:DELETE_CART_ITEM,
     payload:id
+  }
+}
+
+export const getFinalSellingPrice = (payload) =>{
+  return{
+    type:FINAL_SELLING_PRICE,
+    payload: payload
   }
 }

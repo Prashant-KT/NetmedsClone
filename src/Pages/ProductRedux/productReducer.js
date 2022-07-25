@@ -2,6 +2,7 @@ import {
   ADD_TEMP_CART,
   CHANGE_CART_COUNTER,
   DELETE_CART_ITEM,
+  FINAL_SELLING_PRICE,
   GET_PRODUCTS_FAILURE,
   GET_PRODUCTS_REQUEST,
   GET_PRODUCTS_SUCCESS,
@@ -78,6 +79,12 @@ export const productReducer = (state = initial, { type, payload }) => {
         ...state,
         cartProducts: state.cartProducts.filter((el) => el.id !== payload),
         noOfItemInCart: state.noOfItemInCart - 1,
+      };
+    }
+    case FINAL_SELLING_PRICE: {
+      return {
+        ...state,
+        totalPrice: payload
       };
     }
 

@@ -4,6 +4,7 @@ import { Cart } from '../Cart/Cart'
 import { Homepage } from '../HomePage/Homepage'
 import { Signin } from '../LoginPage/Signin'
 import { Signup } from '../LoginPage/Signup'
+import { PaymentPage } from '../Payment/PaymentPage'
 import { ProductPage } from "../ProductPage/ProductPage";
 
 export const AllRoutes = () => {
@@ -14,6 +15,7 @@ export const AllRoutes = () => {
       <Route path="/" element={<Homepage />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/products" element={<ProductPage />} />
+      <Route path="/payment" element={<PaymentPage />} />
     </Routes>
   );
 }
