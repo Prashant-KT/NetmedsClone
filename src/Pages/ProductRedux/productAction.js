@@ -8,6 +8,7 @@ export const SORT_HIGH_TO_LOW = "SORT_HIGH_TO_LOW"
 export const SORT_LOW_TO_HIGH = "SORT_LOW_TO_HIGH";
 export const CHANGE_CART_COUNTER = "CHANGE_CART_COUNTER";
 export const ADD_TEMP_CART = "ADD_TEMP_CART";
+export const DELETE_CART_ITEM = "DELETE_CART_ITEM";
 
 export const getProductsRequest = () => {
   return {
@@ -76,4 +77,11 @@ export const addToTempCart = (payload) =>{
       type:ADD_TEMP_CART,
       payload:payload
     }
+}
+
+export const deleteCartItem = (id)=>{
+  return{
+    type:DELETE_CART_ITEM,
+    payload:id
+  }
 }

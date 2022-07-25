@@ -1,6 +1,7 @@
 import {
   ADD_TEMP_CART,
   CHANGE_CART_COUNTER,
+  DELETE_CART_ITEM,
   GET_PRODUCTS_FAILURE,
   GET_PRODUCTS_REQUEST,
   GET_PRODUCTS_SUCCESS,
@@ -70,6 +71,13 @@ export const productReducer = (state = initial, { type, payload }) => {
       return {
         ...state,
         cartProducts: [...state.cartProducts, payload],
+      };
+    }
+    case DELETE_CART_ITEM: {
+      return {
+        ...state,
+        cartProducts: state.cartProducts.filter((el) => el.id !== payload),
+        noOfItemInCart: state.noOfItemInCart - 1,
       };
     }
 

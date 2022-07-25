@@ -250,11 +250,5 @@
 }
 .disciption > p{
     display: inline-block;
-    margin-bottom: 5px;
-    
-}
-.disciption > p{
-    display: inline-block;
-    margin-bottom: 5px;
-    
+    margin-bottom: 0px;
 }

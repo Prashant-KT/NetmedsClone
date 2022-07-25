@@ -1,0 +1,116 @@
+
+.heading{
+    font-size: 24px;
+    width: 71.5%;
+    margin: auto;
+    color: #151b39;
+     padding: 24px;
+     text-align: left;
+     margin-bottom: 5px;
+}
+
+.containerBox {
+    width: 75%;
+    margin: auto;
+    height: auto;
+    min-height: max-content;
+    display: flex;
+    justify-content: space-between;
+}
+.cartCont{
+    width: 60%;
+    padding: 10px;
+    border: 1px dotted darkblue;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 6px 12px -4px rgb(11 18 25 / 10%);
+}
+.paymentCont{
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    border: 1px dotted darkblue;
+    background-color: white;
+    box-shadow: 0 6px 12px -4px rgb(11 18 25 / 10%);
+}
+.smallSlider{
+    margin-bottom: 10px;
+}
+
+.listCartItems{
+    /* height: 500px; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.eachChild {
+    border-bottom: 1px solid rgba(21, 27, 57, .1);
+    padding: 7px 3px 5px 7px;
+}
+
+.titleSellerImage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sellertitle > p:nth-child(1){
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: .15px;
+    margin-bottom: 1px;
+}
+
+.sellertitle>p:nth-child(2){
+    margin-top: 0px;
+    font-size: 14px;
+    color: rgba(21,27,57,.6);
+    font-style: italic;
+}
+
+.sellingPriceRed{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sellingPriceRed > p{
+    font-size: 17px;
+    margin-top: 5px;
+    color: #ef4281;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 0;
+    letter-spacing: .15px;
+}
+
+.deliveryTimeDelete{
+    display: flex;
+    justify-content: space-between;
+}
+.deliveryTimeDelete > div:nth-child(1){
+    font-size: 12px;
+    color: #151b39;
+    font-weight: 400;
+    flex: 1;
+    border-right: 1px solid gray;
+}
+
+.deliveryTimeDelete>div:nth-child(2){
+    font-size: 14px;
+    color: rgba(21,27,57,.6);
+    line-height: 16px;
+    letter-spacing: 1px;
+    background: #f6f6f7;
+    padding: 10px 0;
+    text-transform: uppercase;
+    float: left;
+    width: 36%;
+    text-align: center;
+    margin: 0 3% 0 4%;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+}

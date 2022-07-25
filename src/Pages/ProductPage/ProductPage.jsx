@@ -74,9 +74,9 @@ export const ProductPage = () => {
   async function handleCart(id) {
     let res = await axios.get(`http://localhost:8080/netmedsproducts/${id}`);
     let cartItem = res.data;
-     dispatch(addToTempCart(cartItem));
-      dispatch(changeCartCounter(1));
-      alert("added")
+    dispatch(addToTempCart(cartItem));
+    dispatch(changeCartCounter(1));
+    alert("added")
       
     // axios.post("http://localhost:8080/netmedscart",cartItem).then((el)=>{
     //   alert("Added")
