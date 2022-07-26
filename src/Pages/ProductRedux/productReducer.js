@@ -6,6 +6,7 @@ import {
   GET_PRODUCTS_FAILURE,
   GET_PRODUCTS_REQUEST,
   GET_PRODUCTS_SUCCESS,
+  RESET_CART,
   SORT_HIGH_TO_LOW,
   SORT_LOW_TO_HIGH,
   TOTAL_MRP,
@@ -103,6 +104,12 @@ export const productReducer = (state = initial, { type, payload }) => {
       return {
         ...state,
         totalSaving: payload,
+      };
+    }
+    case RESET_CART: {
+      return {
+        ...initial,
+        
       };
     }
 

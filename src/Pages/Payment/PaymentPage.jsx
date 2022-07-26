@@ -2,6 +2,7 @@ import styles from "./PaymentPage.module.css";
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { resetCart } from "../ProductRedux/productAction";
 
 export const PaymentPage = () => {
     const { totalMrp, totalPrice, totalSaving } = useSelector(
@@ -16,6 +17,7 @@ export const PaymentPage = () => {
        const dispatch = useDispatch();
 
       function goHome() {
+         dispatch(resetCart());
         alert("Congratulations your order is place")
         navigate('/')
       }

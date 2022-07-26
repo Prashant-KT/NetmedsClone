@@ -12,6 +12,13 @@ export const DELETE_CART_ITEM = "DELETE_CART_ITEM";
 export const FINAL_SELLING_PRICE = "FINAL_SELLING_PRICE";
 export const TOTAL_MRP = "TOTAL_MRP";
 export const TOTAL_SAVING = "TOTAL_SAVING";
+export const RESET_CART = "RESET_CART";
+
+export const resetCart = () =>{
+  return{
+    type:RESET_CART,
+  }
+}
 
 export const getProductsRequest = () => {
   return {
