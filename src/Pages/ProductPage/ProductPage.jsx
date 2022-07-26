@@ -74,20 +74,21 @@ export const ProductPage = () => {
   }
 
   async function handleCart(id) {
+    if (!isAuth) {
+      alert("You need to login first");
 
-    if(!isAuth){
-      alert("You need to login first")
-      
       return navigate("/signin");
     }
 
-    let res = await axios.get(`http://localhost:8080/netmedsproducts/${id}`);
+    let res = await axios.get(
+      `https://cryptic-ravine-10338.herokuapp.com/netmedsproducts/${id}`
+    );
     let cartItem = res.data;
     dispatch(addToTempCart(cartItem));
     dispatch(changeCartCounter(1));
-    alert("added")
-      
-    // axios.post("http://localhost:8080/netmedscart",cartItem).then((el)=>{
+    alert("added");
+
+    // axios.post("https://cryptic-ravine-10338.herokuapp.com/netmedscart",cartItem).then((el)=>{
     //   alert("Added")
     // }).then(()=>{
     //   dispatch(changeCartCounter(1))

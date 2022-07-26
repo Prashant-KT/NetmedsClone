@@ -8,11 +8,15 @@ import {
   GET_PRODUCTS_SUCCESS,
   SORT_HIGH_TO_LOW,
   SORT_LOW_TO_HIGH,
+  TOTAL_MRP,
+  TOTAL_SAVING,
 } from "./productAction";
 
 let initial = {
   noOfItemInCart: 0,
   totalPrice: 0,
+  totalMrp:0,
+  totalSaving:0,
   products: [],
   cartProducts:[],
   isLoading: false,
@@ -84,7 +88,21 @@ export const productReducer = (state = initial, { type, payload }) => {
     case FINAL_SELLING_PRICE: {
       return {
         ...state,
-        totalPrice: payload
+        totalPrice: payload,
+      };
+    }
+
+    case TOTAL_MRP: {
+      return {
+        ...state,
+        totalMrp: payload,
+      };
+    }
+
+    case TOTAL_SAVING: {
+      return {
+        ...state,
+        totalSaving: payload,
       };
     }
 

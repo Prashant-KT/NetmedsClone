@@ -34,7 +34,10 @@ export const Signup = () => {
     };
     if (number !== "" && password !== "" && userName !== "") {
       axios
-        .post("http://localhost:8080/netmendsuserdata", loginData)
+        .post(
+          "https://cryptic-ravine-10338.herokuapp.com/netmendsuserdata",
+          loginData
+        )
         .then((x) => {
           console.log("userAdded");
           setNumber("");

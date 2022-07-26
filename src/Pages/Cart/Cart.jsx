@@ -6,6 +6,8 @@ import { Navbar } from "../Navbar/Navbar";
 import {
   deleteCartItem,
   getFinalSellingPrice,
+  getTotalMrp,
+  getTotalSaving,
 } from "../ProductRedux/productAction";
 import style from "./Cart.module.css";
 import { CartSlider } from "./CartSlider";
@@ -40,6 +42,7 @@ function handleProceed() {
       return ac + Number(el.mrp);
     }, 0) || 0;
   console.log("mrpTotal", mrpTotal);
+dispatch(getTotalMrp(mrpTotal));
 
   let sellingPrice =
     Math.floor(
@@ -48,12 +51,16 @@ function handleProceed() {
       }, 0)
     ) || 0;
   console.log("sellingPrice", sellingPrice);
+ dispatch(getFinalSellingPrice(sellingPrice));
+ console.log("totalPrice", totalPrice);
+
   let totalSaving = Math.ceil(mrpTotal - sellingPrice) || 0;
   console.log("totalSaving", totalSaving);
+  dispatch(getTotalSaving(totalSaving));
+
   // selling price is equal to total price but to get on payment page, storing in redux
 
-  dispatch(getFinalSellingPrice(sellingPrice));
-  console.log("totalPrice", totalPrice);
+ 
 
   return (
     <>

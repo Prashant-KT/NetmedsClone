@@ -1,0 +1,254 @@
+.nav{
+    background-color: #32aeb1;
+    height: 90px;
+    width: 100%; 
+    box-shadow: 0 -2px 6px #333;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav > img{
+    margin-left: 50px;
+    width: 178px;
+    height: 58px;
+}
+
+.blueNav{
+    height: 60px;
+    width: 75%;margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(21, 27, 57);
+    color: white;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+.breadScrum{
+    display: flex;
+    justify-content: space-between;
+}
+
+.horizontalBar{
+    height: 2px;
+    width:50px;
+    background:white;
+    margin-top:8px
+}
+
+.breadScrum p{
+    margin-top: 0px;
+    font-size: 10px;
+    cursor: pointer;
+}
+.breadScrum img{
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+
+:root {
+    --textdark: black;
+    --textLight: rgb(134, 134, 134);
+    --background: #24aeb1
+}
+
+.main_container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f6f6f7;
+    text-align: left;
+    margin-bottom: 300px;
+}
+
+.body_conatiner {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.body_left_div {
+    width: 70%
+}
+
+.body_right_div {
+    width: 28%
+}
+
+.left_vouchers {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+
+.left_vouchers_top_div {
+    display: flex;
+    gap: 1.5%
+}
+
+.left_vouchers_top_div>input {
+    width: 18px;
+}
+
+.left_vouchers_hidden_div {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    ;
+}
+
+.left_vouchers_hidden_div input {
+    width: 70%;
+    outline: none;
+    font-size: 16px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    color: var(--textLight);
+    border: 1px solid rgb(201, 201, 201)
+}
+
+.left_vouchers_hidden_div button {
+    background: var(--background);
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.left_paytm {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+
+.payment_name {
+    color: var(--textLight)
+}
+
+.left_paytm>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment_logo {
+    display: flex;
+    align-items: center;
+    gap: 10%
+}
+
+.payment_logo>img {
+    width: 45%
+}
+
+.payment_link {
+    color: red;
+    cursor: pointer;
+}
+
+.payment_offer {
+    margin-left: 6%;
+    color: var(--textLight)
+}
+
+.left_reward {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+
+.reward_logo_div {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.reward_img_div {
+    display: flex;
+    align-content: center;
+    gap: 15px;
+
+}
+
+.reward_img_div>img {
+    width: 40px;
+    object-fit: contain;
+}
+
+.reward_payment_offer {
+    color: var(--textLight);
+    margin-left: 6%;
+}
+
+.payment_hidden_div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.payment_hidden_div>button {
+    background: var(--background);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 20px;
+    font-size: 18px;
+}
+
+.reward_logo_div input {
+    width: 20px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.right_div_payment {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+
+.right_div_payment>p {
+    color: var(--textLight)
+}
+
+.price_div>div {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    line-height: 5px;
+}
+
+.payment_saving {
+    background-color: #f3f8ec;
+    padding: 1px 0;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    color: green;
+}
+
+.payment_saving>p {
+    text-align: left;
+    font-weight: 450;
+    font-size: medium;
+}
+
+.description p {
+    font-size: 11px;
+    padding: 2px 20px;
+    color: var(--textLight);
+
+}
+
+.description span {
+    color: #0b6acf;
+}

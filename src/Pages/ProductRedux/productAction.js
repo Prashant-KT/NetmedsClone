@@ -10,7 +10,8 @@ export const CHANGE_CART_COUNTER = "CHANGE_CART_COUNTER";
 export const ADD_TEMP_CART = "ADD_TEMP_CART";
 export const DELETE_CART_ITEM = "DELETE_CART_ITEM";
 export const FINAL_SELLING_PRICE = "FINAL_SELLING_PRICE";
-
+export const TOTAL_MRP = "TOTAL_MRP";
+export const TOTAL_SAVING = "TOTAL_SAVING";
 
 export const getProductsRequest = () => {
   return {
@@ -35,12 +36,15 @@ export const getProducts = (products) => {
 export const getProductsSuccess = (page) => async (dispatch) => {
   // console.log("page",page);
 
-  let r = await axios.get("http://localhost:8080/netmedsproducts", {
-    params: {
-      _limit: 16,
-      _page: page,
-    },
-  });
+  let r = await axios.get(
+    "https://cryptic-ravine-10338.herokuapp.com/netmedsproducts",
+    {
+      params: {
+        _limit: 16,
+        _page: page,
+      },
+    }
+  );
 
   let products = await r.data;
   dispatch(getProducts(products));
@@ -64,12 +68,15 @@ export const sortProductLowToHigh = () => {
 };
 
 export const filterProducts = (page,basedOn) => async (dispatch) => {
-  let r = await axios.get(`http://localhost:8080/netmedsproducts?category=${basedOn}`, {
-    params: {
-      _limit: 16,
-      _page: page,
-    },
-  });
+  let r = await axios.get(
+    `https://cryptic-ravine-10338.herokuapp.com/netmedsproducts?category=${basedOn}`,
+    {
+      params: {
+        _limit: 16,
+        _page: page,
+      },
+    }
+  );
   let products = await r.data;
   dispatch(getProducts(products));
 };
@@ -94,3 +101,17 @@ export const getFinalSellingPrice = (payload) =>{
     payload: payload
   }
 }
+
+export const getTotalMrp = (payload) => {
+  return {
+    type: TOTAL_MRP,
+    payload: payload,
+  };
+};
+
+export const getTotalSaving = (payload) => {
+  return {
+    type: TOTAL_SAVING,
+    payload: payload,
+  };
+};
