@@ -80,7 +80,7 @@ export const filterProducts = (page,basedOn) => async (dispatch) => {
     {
       params: {
         _limit: 16,
-        _page: page,
+        _page: 1,
       },
     }
   );

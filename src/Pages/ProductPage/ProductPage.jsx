@@ -19,51 +19,56 @@ import {
 } from "../ProductRedux/productAction";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
-import axios from 'axios';
-
 
 export const ProductPage = () => {
   const dispatch = useDispatch();
-   const [searchParams, setSearchParams] = useSearchParams();
-   const [page, setPage] = useState(+searchParams.get("_page") || 1);
-   const [def,setDef] = useState(1);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [page, setPage] = useState(+searchParams.get("_page") || 1);
+  const [def, setDef] = useState(1);
+  const [chk, setChk] = useState(false);
+
   const { isLoading, products } = useSelector((state) => state.productDetails);
   const isAuth = useSelector((state) => state.loginState.isAuth);
-  const navigate = useNavigate()
-
+  const navigate = useNavigate();
 
   // to show num of content on page
-  let curritem = page *16;
-  if(curritem > 60){
-    curritem = 62
+  let curritem = page * 16;
+  if (curritem > 60) {
+    curritem = 62;
   }
 
-
   useEffect(() => {
-    setSearchParams({ _page: page, });
+    setSearchParams({ _page: page });
     dispatch(getProductsRequest());
     setTimeout(() => {
       dispatch(getProductsSuccess(page));
     }, 300);
-  }, [dispatch, page, setSearchParams,def]);
+  }, [dispatch, page, setSearchParams, def]);
 
-  function handleFilter(e) {
+  function handleFilter(e, num) {
     // console.log(e.target.checked);
     //  dispatch(getProductsRequest());
-    if(e.target.checked){
+    setChk((prev) => {
+      if (prev === num) {
+        return false;
+      } else {
+        return num;
+      }
+    });
+    if (e.target.checked) {
       let filter_item = e.target.id;
-       dispatch(filterProducts(page,filter_item))
-    }else{
+      dispatch(filterProducts(page, filter_item));
+    } else {
       dispatch(getProductsSuccess(page));
     }
   }
 
   function paginate(a) {
-    setPage(page+a)
+    setPage(page + a);
   }
 
   function handleSortDefault() {
-    setDef(def+1)
+    setDef(def + 1);
   }
 
   function handleSortHighToLow() {
@@ -80,10 +85,18 @@ export const ProductPage = () => {
       return navigate("/signin");
     }
 
-    let res = await axios.get(
-      `https://cryptic-ravine-10338.herokuapp.com/netmedsproducts/${id}`
-    );
-    let cartItem = res.data;
+    let res1 = products.filter((el) => {
+     return el.id === id;
+      // if (el.id === id) {
+      //   return true;
+      // }
+    });
+
+    // let res = await axios.get(
+    //   `https://cryptic-ravine-10338.herokuapp.com/netmedsproducts/${id}`
+    // );
+
+    let cartItem = res1[0];
     dispatch(addToTempCart(cartItem));
     dispatch(changeCartCounter(1));
     alert("added");
@@ -97,38 +110,34 @@ export const ProductPage = () => {
 
   return (
     <>
+      <Navbar />
+      <div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+      </div>
       {isLoading ? (
         <CircularProgress disableShrink />
       ) : (
         <>
-          <Navbar />
-          <div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-          </div>
           <div className={style.sliderContainerBoxx}>
             <ProductBigslider height={"350px"} />
           </div>
           {/* slider top ends here */}
-          <div>
-            <br></br>
-            <br></br>
-            <br></br>
-          </div>
+          <div></div>
           {/* left filter and right box full starts here */}
           <div className={style.bottomBigContainer}>
             <div className={style.leftFilterDiv}>
-              <div className={style.leftFilterDivFirst}>
+              {/* <div className={style.leftFilterDivFirst}>
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz-0w2ObvUVRa3Jt8w5WDtn3wQZahIbetFyQ&usqp=CAU"
                   alt=""
                   style={{ width: "100%", height: "100%" }}
                 />
-              </div>
+              </div> */}
               {/* small left side lungs image end here */}
               <div className={style.leftFilterDivSecond}>
                 <h1 className={style.hfheading}>Filters</h1>
@@ -139,7 +148,8 @@ export const ProductPage = () => {
                       type="checkbox"
                       name="Ayurvedic"
                       id="Ayurvedic"
-                      onChange={(e) => handleFilter(e)}
+                      checked={1 === chk}
+                      onChange={(e) => handleFilter(e, 1)}
                     />
                     <label>Ayurvedic</label>
                   </div>
@@ -148,7 +158,8 @@ export const ProductPage = () => {
                       type="checkbox"
                       name="Allopathic"
                       id="Allopathic"
-                      onChange={(e) => handleFilter(e)}
+                      checked={2 === chk}
+                      onChange={(e) => handleFilter(e, 2)}
                     />
                     <label>Allopathic</label>
                   </div>
@@ -157,7 +168,8 @@ export const ProductPage = () => {
                       type="checkbox"
                       name="Fitness"
                       id="Fitness"
-                      onChange={(e) => handleFilter(e)}
+                      checked={3 === chk}
+                      onChange={(e) => handleFilter(e, 3)}
                     />
                     <label>Fitness</label>
                   </div>
@@ -166,7 +178,8 @@ export const ProductPage = () => {
                       type="checkbox"
                       name="Devices"
                       id="Devices"
-                      onChange={(e) => handleFilter(e)}
+                      checked={4 === chk}
+                      onChange={(e) => handleFilter(e, 4)}
                     />
                     <label>Devices</label>
                   </div>
@@ -175,16 +188,16 @@ export const ProductPage = () => {
               {/* left side filter box portion ended here */}
             </div>
             <div className={style.rightProductDiv}>
-              <div>
+              {/* <div>
                 <img
                   src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1656959707_Category_Web_1000x200px_copy.jpg"
                   alt=""
                 />
-              </div>
+              </div> */}
 
               {/* right side product side UI */}
               <div className={style.makeSortParent}>
-                <div>
+                <div style={{ color: "black" }}>
                   Showing <b>{curritem}</b> of <b>{62}</b> items
                 </div>
                 <div>
@@ -225,7 +238,6 @@ export const ProductPage = () => {
                       <button
                         className={style.productCartButton}
                         onClick={() => handleCart(el.id)}
-                       
                       >
                         ADD TO CART
                       </button>
@@ -239,7 +251,10 @@ export const ProductPage = () => {
             <button disabled={page === 1} onClick={() => paginate(-1)}>
               <ArrowBackIosNewSharpIcon sx={{ fontSize: 40 }} />
             </button>
-            <button disabled={page === 4} onClick={() => paginate(1)}>
+            <button
+              disabled={page === 4 || products.length < 16}
+              onClick={() => paginate(1)}
+            >
               <ArrowForwardIosSharpIcon sx={{ fontSize: 40 }} />
             </button>
           </div>

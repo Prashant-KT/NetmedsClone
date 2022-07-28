@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Navbar } from "../Navbar/Navbar";
 import style from "./Homepage.module.css";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BigCommonSlider } from "./BigCommonSlider/BigCommonSlider";
 import { trandingImages } from "./trending";
 import { newArrivalSlider } from "./newArrivals";
@@ -13,7 +13,7 @@ export const Homepage = () => {
   const [loading, setLoading] = useState(true);
   const [show, setShow] = useState(true);
   const [position, setPosition] = useState("static");
-
+  const navigate = useNavigate()
   const controlNavbar = () => {
     if (window.scrollY > 50) {
       setShow(false);
@@ -34,6 +34,10 @@ export const Homepage = () => {
     };
   }, []);
 
+  function goProductPage() {
+    return navigate('/products')
+  }
+
   return (
     <>
       {loading ? (
@@ -45,7 +49,7 @@ export const Homepage = () => {
             {show ? (
               <div className={style.withAttachedNavbar}>
                 <div>
-                  <div>
+                  <div onClick={goProductPage}>
                     <Link to="/products">
                       <img
                         src="https://www.netmeds.com/pssets/version1657888943/gloryweb/images/icons/medicine.svg"
@@ -84,7 +88,7 @@ export const Homepage = () => {
                     </Link>
                   </div>
                   <div>
-                    <Link to="/products">
+                    <Link to="/products" onClick={goProductPage}>
                       <img
                         src="https://www.netmeds.com/pssets/gloryweb/images/icons/beauty.svg"
                         alt=""
@@ -95,7 +99,7 @@ export const Homepage = () => {
                     </Link>
                     <IoMdArrowDropdown />
                   </div>
-                  <div>
+                  <div onClick={goProductPage}>
                     <Link to="/products">
                       <img
                         src="https://www.netmeds.com/pssets/gloryweb/images/icons/diagnostics.svg"
@@ -115,7 +119,7 @@ export const Homepage = () => {
           <br></br>
           {/*  slider part starts here*/}
           <div className={style.sliderContainerBox}>
-            <BigCommonSlider height={"350px"} />
+            <BigCommonSlider height={"350px"} goProductPage={goProductPage} />
           </div>
 
           <br></br>
@@ -132,7 +136,7 @@ export const Homepage = () => {
               </span>
             </div>
             <div>
-              <img 
+              <img
                 src="https://www.netmeds.com/assets/gloryweb/images/icons/Beautynew.svg"
                 alt=""
               />
@@ -259,7 +263,7 @@ export const Homepage = () => {
             <h2> Shop by Category </h2>
             <p> View All </p>
           </div>
-          <div className={style.shopbyCategory}>
+          <div onClick={goProductPage} className={style.shopbyCategory}>
             <div>
               <img
                 src="https://www.netmeds.com/images/category/481/thumb/ayush_1.jpg"
@@ -316,7 +320,7 @@ export const Homepage = () => {
             <h2> Categories in Focus </h2>
             <p> View All </p>
           </div>
-          <div className={style.shopbyCategory}>
+          <div onClick={goProductPage} className={style.shopbyCategory}>
             <div>
               <img
                 src="https://www.netmeds.com/images/category/3087/thumb/feminine_hygiene_1.jpg"
@@ -360,48 +364,6 @@ export const Homepage = () => {
           </div>
           <div>
             <div className={style.disciption}>
-              <b>Popular Wellness Products:</b>
-              <p>Dabur Shilajit Gold Capsule 20's</p>{" "}
-              <p>Dabur Chyawanprash Awaleha 500 gm</p>
-              <p>Pankajakasthuri Breathe Easy Granules 400 gm</p>
-              <p>Nestle Peptamen Peptide Based Diet Powder</p>
-              <p>Pentasure 2.0 Vanilla Powder 1 kg</p>
-              <p>Scalpe Plus Anti Dandruff Shampoo 75 ml</p>
-              <p>
-                Nestle Nan Excella Pro 1 (Upto 6 Months) Powder 400 gm (Refill
-                Pack)
-              </p>
-              <p>Accu-Chek Active Test Strips 50's Breathe Easy </p>
-              <p>D Protin Chocolate Powder 500 gm,- Vanilla Flavour 400 gm</p>
-              <p>Climax Spray for Men 12 gm</p>
-              <br></br>
-              <b>Top-Selling Health Packages:</b>
-              <p>AAROGYAM C</p>
-              <p>Netmed Health Pack</p>
-              <p>Aarogyam 1.3</p>
-              <p>Netmeds Swasthya</p>
-              <p>Diabetic Checkup</p>
-              <p>Aarogyam 1.7</p>
-              <p>Basic Allergy Package</p>
-              <p>Aarogyam X</p>
-              <p>Advance Heart Care product</p>
-              <p>Netmeds Swasthya Plus</p>
-              <p>Most Viewed Health Articles:</p>
-              <p> Spray for Men 12 gm</p>
-              <br></br>
-              <b>Top-Selling Lab Tests:</b>
-              <p>Complete Blood Count (CBC)/Complete Hemogram</p>
-              <p>LIVER FUNCTION TEST</p>
-              <p>Blood Glucose Fasting (FBS)</p>
-              <p>THYROID PROFILE -TOTAL(T3,T4&amp;TSH)</p>
-              <p>Fever Profile</p>
-              <p>Urine Routine &amp; </p>
-              <p>Hemoglobin A1C (HbA1c)</p>
-              <p>25-OH Vitamin D (TOTAL)/Vitamin D Total 25 Hydroxy</p>
-              <p>Uric Acid</p>
-              <p>Maternal screen-1st Trimester Dual Marker test</p>
-              <br></br>
-              <b>Top-Selling Radiology Tests:</b>
               <p>Ultrasound Whole Abdomen</p>
               <p>MRI Scan Brain</p>
               <p>CT Scan Brain</p>
@@ -520,7 +482,7 @@ export const Homepage = () => {
           </div>
         </div>
       )}
-      <Footer/>
+      <Footer />
     </>
   );
 };

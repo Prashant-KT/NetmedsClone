@@ -10,7 +10,7 @@ function SampleNextArrow(props) {
       className={className}
       style={{
         ...style,
-        display: "block",
+        display: "none",
         zIndex: 1,
         background: "rgb(247,176,48)",
         borderRadius:"50%"
@@ -21,18 +21,18 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, style, goProductPage } = props;
   return (
     <div
       className={className}
       style={{
         ...style,
-        display: "block",
+        display: "none",
         zIndex: 1,
         background: "rgb(247,176,48)",
         borderRadius: "50%",
       }}
-      onClick={onClick}
+       onClick={goProductPage}
     />
   );
 }
@@ -46,13 +46,13 @@ export const RunningSlider = ({images}) => {
     speed: 5000,
     slidesToShow: 3,
     swipeToSlide: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     cssEase: "linear",
     autoplay: true,
     slidesToScroll: 1,
     variableWidth: true,
-    nextArrow: <SamplePrevArrow />,
-    prevArrow: <SampleNextArrow />,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
   return (
     <div style={{ width: "96%", margin: "auto" }}>
